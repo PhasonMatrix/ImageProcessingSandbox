@@ -2,6 +2,9 @@
 
 Image viewer for developing and testing image processing algorithms. Side-by-side image viewer for before-and-after images. Zoom and pan for inspecting details.
 
+![ImageProcessingSandboxScreenshot](https://github.com/PhasonMatrix/ImageProcessingSandbox/assets/37615629/1a0702c2-7d66-41e8-b561-7dc02d42f2ca)
+
+
 Create your own image procssing class, inheriting from `AbstractImageProcessor`, like this:
 
 ```python
