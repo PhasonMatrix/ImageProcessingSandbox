@@ -1,6 +1,6 @@
 # ImageProcessingSandbox
 
-Image viewer for developing and testing image processing algorithms.
+Image viewer for developing and testing image processing algorithms. Side-by-side image viewer for before-and-after images. Zoom and pan for inspecting details.
 
 Create your own image procssing class, inheriting from `AbstractImageProcessor`, like this:
 
@@ -9,7 +9,7 @@ class ImageProcessorInvert(AbstractImageProcessor):
     ...
 ```
 
-Then implement the method `process_image(self, input: Image.Image)->Image.Image`
+Then implement the method `process_image()`
 
 Then, add it to the list of selectable processors in `MainWindow.SetUpImageProcessors()`
 
@@ -40,7 +40,7 @@ Then, add it to the list of selectable processors in `MainWindow.SetUpImageProce
 ```
 
 
-The included image processing algorithms are not designed to be efficient or best-practice. This is simply a sand-box for tring ideas.
+The included image processing algorithms are not designed to be efficient or best-practice. This is simply a sand-box for trying ideas.
 
 
 ----------------------------------
