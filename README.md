@@ -1,11 +1,11 @@
 # ImageProcessingSandbox
 
-Image viewer for developing and testing image processing algorithms. Side-by-side image viewer for before-and-after images. Zoom and pan for inspecting details.
+Image viewer for developing and testing image processing algorithms. Side-by-side viewer for before-and-after images. Zoom and pan for inspecting details. Chain processes together by swapping the output image back into the input for the next process.
 
 ![ImageProcessingSandboxScreenshot](https://github.com/PhasonMatrix/ImageProcessingSandbox/assets/37615629/1a0702c2-7d66-41e8-b561-7dc02d42f2ca)
 
 
-Create your own image procssing class, inheriting from `AbstractImageProcessor`, like this:
+Create your own image processing class, inheriting from `AbstractImageProcessor`, like this:
 
 ```python
 class ImageProcessorInvert(AbstractImageProcessor):
