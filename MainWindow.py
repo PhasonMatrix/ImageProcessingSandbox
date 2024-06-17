@@ -171,7 +171,7 @@ class MainWindow(wx.Frame):
         self.left_canvas.ClearAll()
         self.left_canvas.Refresh()
         w, h = self.left_canvas.GetSize()
-        left_scaled_bitmap = ScaledBitmap(self.left_image, (0,0), h, 'cc')
+        left_scaled_bitmap = ScaledBitmap(self.left_image, (0,0), h)
         self.left_canvas.AddObject(left_scaled_bitmap)
         self.left_canvas.Draw()
     
@@ -180,7 +180,7 @@ class MainWindow(wx.Frame):
         self.right_canvas.ClearAll()
         self.right_canvas.Refresh()
         w, h = self.right_canvas.GetSize()
-        right_scaled_bitmap = ScaledBitmap(self.right_image, (0,0), h, 'cc')
+        right_scaled_bitmap = ScaledBitmap(self.right_image, (0,0), h)
         self.right_canvas.AddObject(right_scaled_bitmap)
         self.right_canvas.Draw()
     
