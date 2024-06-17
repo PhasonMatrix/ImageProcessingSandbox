@@ -37,7 +37,7 @@ class MainWindow(wx.Frame):
 
         recycle_label= wx.StaticText(left_panel, label="Recycle the output image (right) back to become input (left) for next process.")
         recycle_label.Wrap(150)
-        recycle_image_button = wx.Button(left_panel, label="Input<-Ouput", size=(150,30))
+        recycle_image_button = wx.Button(left_panel, label="Input<-Output", size=(150,30))
         self.Bind(wx.EVT_BUTTON, self.OnRecycleButtonClick, recycle_image_button)
 
         save_result_button = wx.Button(left_panel, label="Save result", size=(150,30))
@@ -171,7 +171,8 @@ class MainWindow(wx.Frame):
         self.left_canvas.ClearAll()
         self.left_canvas.Refresh()
         w, h = self.left_canvas.GetSize()
-        self.left_canvas.AddScaledBitmap(self.left_image, (0,0), h, 'cc')
+        left_scaled_bitmap = ScaledBitmap(self.left_image, (0,0), h, 'cc')
+        self.left_canvas.AddObject(left_scaled_bitmap)
         self.left_canvas.Draw()
     
 
@@ -179,7 +180,8 @@ class MainWindow(wx.Frame):
         self.right_canvas.ClearAll()
         self.right_canvas.Refresh()
         w, h = self.right_canvas.GetSize()
-        self.right_canvas.AddScaledBitmap(self.right_image, (0,0), h, 'cc')
+        right_scaled_bitmap = ScaledBitmap(self.right_image, (0,0), h, 'cc')
+        self.right_canvas.AddObject(right_scaled_bitmap)
         self.right_canvas.Draw()
     
 
